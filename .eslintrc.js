@@ -7,7 +7,8 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:prettier/recommended',
-		"prettier/react"
+		"prettier/react",
+		"prettier"
 	],
 	'globals': {
 		'Atomics': 'readonly',
@@ -30,26 +31,6 @@ module.exports = {
 		}
 	},
 	'rules': {
-		'prettier/prettier': 'error',
-		// 'indent': [
-		// 	'error',
-		// 	'tab'
-		// ],
-		// 'linebreak-style': [
-		// 	'error',
-		// 	'unix'
-		// ],
-		// 'quotes': [
-		// 	'error',
-		// 	'double'
-		// ],
-		// 'semi': [
-		// 	'error',
-		// 	'never'
-		// ],
-		// 'object-curly-spacing': [
-		// 	"error",
-		// 	"always"
-		// ]
+		'prettier/prettier': ['error']
 	}
 }
