@@ -5,7 +5,9 @@ module.exports = {
 	},
 	'extends': [
 		'eslint:recommended',
-		'plugin:react/recommended'
+		'plugin:react/recommended',
+		'plugin:prettier/recommended',
+		"prettier/react"
 	],
 	'globals': {
 		'Atomics': 'readonly',
@@ -19,7 +21,8 @@ module.exports = {
 		'sourceType': 'module'
 	},
 	'plugins': [
-		'react'
+		'react',
+		'prettier'
 	],
 	"settings": {
 		"react": {
@@ -27,25 +30,26 @@ module.exports = {
 		}
 	},
 	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'unix'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'never'
-		],
-		'object-curly-spacing': [
-			"error",
-			"always"
-		]
+		'prettier/prettier': 'error',
+		// 'indent': [
+		// 	'error',
+		// 	'tab'
+		// ],
+		// 'linebreak-style': [
+		// 	'error',
+		// 	'unix'
+		// ],
+		// 'quotes': [
+		// 	'error',
+		// 	'double'
+		// ],
+		// 'semi': [
+		// 	'error',
+		// 	'never'
+		// ],
+		// 'object-curly-spacing': [
+		// 	"error",
+		// 	"always"
+		// ]
 	}
 }
