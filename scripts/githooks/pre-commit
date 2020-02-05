@@ -4,8 +4,10 @@ echo "Checking changed files to see if there are errors..."
 #grab all Javascript files that have changed
 changedFiles=$(git diff --staged --name-only|grep "\.js$")
 
-#run eslint against all changed files
+#run eslint against all changed Javascript files
+if [$? == 0] then
 result=$(eslint $changedFiles)
+fi
 
 #look for the word 'error' in the results
 case $result in
