@@ -5,7 +5,7 @@ echo "Checking changed files to see if there are errors..."
 changedFiles=$(git diff --staged --name-only|grep "\.js$")
 
 #run eslint against all changed Javascript files
-if [[0 = 0]]
+if [0 = 0]
 then
 result=$(eslint $changedFiles)
 echo "we get here"
