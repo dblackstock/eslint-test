@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const anotherTest = () => {
-    let someThing = "words and again";
+    let someThing = "words";
     console.log(someThing);
   };
 
@@ -19,6 +19,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. {testFunction}
+          {anotherTest}
         </p>
         <a
           className="App-link"
