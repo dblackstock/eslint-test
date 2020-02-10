@@ -4,12 +4,12 @@ import "./App.css";
 
 function App() {
   const anotherTest = () => {
-    let someThing = "words again";
+    const someThing = "words agains";
     console.log(someThing);
   };
 
   const testFunction = () => {
-    let anObject = { key: "words" };
+    const anObject = { key: "words" };
     return anObject.key;
   };
 
@@ -19,6 +19,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. {testFunction}
+          {anotherTest}
         </p>
         <a
           className="App-link"
