@@ -23,8 +23,9 @@ case $resultLint in
         ;;
     esac
 
+echo
 #run typescript
-resultCheckTypes =$(npm run --silent check-types)
+resultCheckTypes=$(npm run --silent check-types)
 
 case $resultCheckTypes in
     *error*)
