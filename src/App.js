@@ -4,12 +4,12 @@ import "./App.css";
 
 function App() {
   const anotherTest = () => {
-    let someThing = "words again";
+    const someThing = "words again";
     console.log(someThing);
   };
 
   const testFunction = () => {
-    let anObject = { key: "words" };
+    const anObject = { key: "words" };
     return anObject.key;
   };
 
