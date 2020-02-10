@@ -11,30 +11,21 @@ resultLint=$(eslint --ext .js,.ts $changedFiles)
 echo "we get here"
 fi
 
-#look for the word 'error' in the results
-case $resultLint in
-    *error*)
-        echo "$resultLint"
-        echo
-        echo "Changes could not be committed due to errors found by ESLint. Please correct these before committing."
-        ;;
-    *)
-        echo "ESLint has found no errors in the committed files."
-        ;;
-    esac
-
-echo
 #run typescript
 resultCheckTypes=$(npm run --silent check-types)
 
-case $resultCheckTypes in
+#concatenate the results
+resultsCombined='=====ESLint=====\n${resultLint}\n=====TypeScript=====\n${resultCheckTypes}'
+
+#look for the word 'error' in the results
+case $resultsCombined in
     *error*)
-        echo "$resultCheckTypes"|grep "error"
+        echo "$resultsCombined"
         echo
-        echo "Changes could not be committed due to errors found by TypeScript. Please correct these before committing."
+        echo "Changes could not be committed due to errors found by ESLint and/or TypeScript. Please correct these before committing."
         exit 1
         ;;
     *)
-        echo "TypeScript has found no errors in all .ts files."
+        echo "ESLint and TypeScript have found no errors in the committed files."
         ;;
     esac

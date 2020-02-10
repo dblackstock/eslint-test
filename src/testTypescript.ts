@@ -2,7 +2,7 @@ const processData = (input: number): void => {
   console.log(input);
 };
 
-processData("2");
+processData("22");
 
 interface userValueType {
   name: string;
