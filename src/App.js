@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const anotherTest = () => {
-    const someThing = "words again";
+    const someThing = "words agains";
     console.log(someThing);
   };
 

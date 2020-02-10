@@ -5,7 +5,7 @@ echo "Checking changed files to see if there are errors..."
 changedFiles=$(git diff --staged --name-only|grep -E "\.(js|ts)$")
 
 #run eslint against all changed JavaScript files
-if [ ! -z "$changedFiles"]
+if [ ! -z "$changedFiles" ]
 then
 resultLint=$(eslint --ext .js,.ts $changedFiles)
 echo "we get here"

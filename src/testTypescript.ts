@@ -4,11 +4,11 @@ const processData = (input: number): void => {
 
 processData("2");
 
-interface userValueTypes {
+interface userValueType {
   name: string;
 }
 
-const processObject = (userData: userValueTypes): void => {
+const processObject = (userData: userValueType): void => {
   console.log(userData.name);
 };
 
