@@ -2,13 +2,13 @@ const processData = (input: number): void => {
   console.log(input);
 };
 
-processData("22");
+processData(2);
 
-interface userValueType {
+interface UserValueType {
   name: string;
 }
 
-const processObject = (userData: userValueType): void => {
+const processObject = (userData: UserValueType): void => {
   console.log(userData.name);
 };
 

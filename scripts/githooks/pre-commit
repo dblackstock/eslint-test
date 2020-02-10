@@ -8,14 +8,17 @@ changedFiles=$(git diff --staged --name-only|grep -E "\.(js|ts)$")
 if [ ! -z "$changedFiles" ]
 then
 resultLint=$(eslint --ext .js,.ts $changedFiles)
-echo "we get here"
 fi
+echo "ESLint test complete, beginning TypeScript test..."
 
 #run typescript
 resultCheckTypes=$(npm run --silent check-types)
 
 #concatenate the results
-resultsCombined='=====ESLint=====\n${resultLint}\n=====TypeScript=====\n${resultCheckTypes}'
+resultsCombined="=====ESLint=====
+${resultLint}
+=====TypeScript=====
+${resultCheckTypes}"
 
 #look for the word 'error' in the results
 case $resultsCombined in
